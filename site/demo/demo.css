@@ -1,0 +1,20 @@
+/* Page chrome for the stand-alone demo (inside WordPress the admin provides this). */
+html, body { margin: 0; padding: 0; background: #f5f6fa; font-family: "Vazirmatn", Tahoma, system-ui, sans-serif; }
+body { min-height: 100vh; }
+a { text-decoration: none; }
+.demo-bar { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; padding: 9px 18px; background: #0B1B3F; color: #dbe6ff; font-size: 13px; line-height: 1.6; }
+.demo-bar strong { color: #fff; font-weight: 700; }
+.demo-bar__dot { width: 9px; height: 9px; border-radius: 50%; background: #34d399; box-shadow: 0 0 0 0 rgba(52, 211, 153, .7); animation: demo-pulse 2s infinite; flex-shrink: 0; }
+.demo-bar__txt { flex: 1 1 260px; opacity: .85; }
+.demo-bar__link { color: #fff; background: #1D4ED8; padding: 5px 14px; border-radius: 8px; font-weight: 600; white-space: nowrap; }
+.demo-bar__link:hover { background: #2563eb; }
+@keyframes demo-pulse { 70% { box-shadow: 0 0 0 8px rgba(52, 211, 153, 0); } 100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); } }
+@media (max-width: 640px) { .demo-bar__txt { display: none; } .demo-bar { justify-content: space-between; } }
+
+/* No WordPress admin bar here: remove its 32px / 46px offsets. */
+#seolity-app { min-height: calc(100vh - 40px); }
+#seolity-app .sl-top { inset-block-start: 0; }
+#seolity-app .sl-side { inset-block-start: 70px; height: calc(100vh - 70px); }
+@media (max-width: 960px) {
+	#seolity-app .sl-side { inset-block: 0 0; height: auto; }
+}
