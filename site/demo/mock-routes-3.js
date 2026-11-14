@@ -146,7 +146,7 @@
 		return { provider: 'sub_claude', active: 'claude', claude_token: true, codex_auth: true, repo: 'demo-user/seolity-ai-runner', repo_url: 'https://github.com/', branch: 'main', requests_24h: { done: 46, queued: 0, submitted: 1, failed: 1 }, runs: { items: [], error: '' }, method: { claude: 'auto', codex: 'auto' }, missing: [] };
 	} );
 	get( 'subscription/verify', function () {
-		return { deployed: true, exists: true, private: false, repo: 'demo-user/seolity-ai-runner', workflow: true, engines: { claude: true, codex: true }, ok: true };
+		return { deployed: true, exists: true, private: false, repo: 'demo-user/seolity-ai-runner', workflow: 'active', engines: { claude: true, codex: true }, ok: true };
 	} );
 	get( 'cloudflare', function () {
 		return { deployed: true, configured: true, site_public: true, mode: 'auto', token: true, account_id: 'a1b2…', accounts: [ { id: 'a1b2c3d4e5f6', name: 'Demo account' } ], notice: '', url: 'https://seolity-relay.demo.workers.dev', cron: 1, last_heartbeat: ago( 0, 0 ), last_pull: ago( 0, 0 ), version: '1.19.2', outdated: false, cron_error: '', runner_relay: true, wp_api: true };
