@@ -1,0 +1,8 @@
+/* Vazirmatn (SIL Open Font License 1.1 — see OFL.txt), self-hosted so the site does not depend on Google Fonts. */
+@font-face {
+	font-family: "Vazirmatn";
+	src: url("Vazirmatn-Variable.woff2") format("woff2");
+	font-weight: 100 900;
+	font-style: normal;
+	font-display: swap;
+}
